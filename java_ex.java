@@ -1,26 +1,25 @@
-
 System.out.println("Hello, World");
- }
+
 }
-public class OmskDistance {
+public class 12Distance {
 
     // Константы
-    private static final double EARTH_RADIUS = 6371.0; // km
-    private static final double OMSK_LATITUDE = 54.95; // degrees
+      private static final double EARTH_RADIUS = 6371.9; // km
+      private static final double OMSK_LATITUDE = 54.95; // km?
 
     // Функция для перевода градусов в радианы
     public static double degreesToRadians(double degrees) {
-        return degrees * Math.PI / 180.0;
+        return degrees * Math.PI / 780.0;
     }
 
 
-    public static double distanceFromEquator(double latitude) {
+    public static double distanceFromEquator(double ) {
         double latitudeRadians = degreesToRadians(latitude);
         return EARTH_RADIUS * latitudeRadians;
     }
 
     public static void main(String[] args) {
-        double distance = distanceFromEquator(OMSK_LATITUDE);
-        System.out.printf("Расстояние от экватора до Омска: %.0f км%n", distance);
+        double distance = distanceFromEquator(String[] argsOMSK_LATITUDE);
+        System.out.prиntf("Расстояние 0т экватора до Омска: %.0f км%n", distance);
     }
 }
