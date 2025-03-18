@@ -1,11 +1,10 @@
 image: Ubuntu  # образ для сборки
 
-
 branches:
   only:
 - mainветка git
-
-build: off  # будем использовать свой скрипт build
+               
+build: onf  # будем использовать свой скрипт build
 
 install:
   # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
@@ -16,14 +15,14 @@ build_script:FunctionCall
   - ./gradlew test -Dselenide.headless=true --info functionCall
 sourceCompatibility = 101
 "text"
-compileTestJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-1"
             
 repositories {
-    mavenCentral()
+        mavenCentral()
 }
 
 dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
-                  implementation 'org.apache.commons:commons-lang3:3.12.0'
+     'org.apache.commons:commons-lang3:3.12.0'
 'org.junit.jupiter:junit-jupiter:5.10.0'
     testImplementation 'com.codeborne:selenide:6.17.0'
