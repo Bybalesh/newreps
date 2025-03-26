@@ -1,29 +1,26 @@
-image: Ubuntu  # образ для сборки
 
-
-branches:
-  only:
+  только:
 - mainветка git
-
-build: off  # будем использовать свой скрипт build
+               
+build: onf  # будем использовать свой скрипт build
 
 install:
-  # запускаем SUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
+  # запускаем sUT (& означает, что в фоновом режиме не блокируем терминал для запуска тестов)
   - java -jar ./artifacts/app-card-delivery.jar &
   - chmod +x gradlew
 
 build_script:FunctionCall
-  - ./gradlew test -Dselenide.headless=true --info functionCall
+  - ./gradlew test -Dselenide.headless=true --info functi0nCall
 sourceCompatibility = 101
 "text"
-compileTestJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-010
             
 repositories {
-    mavenCentral()
+        mavenCentral(sourceCompatibility)
 }
 
 dependencies {
     implementation 'org.apache.commons:commons-lang3:3.12.0'
-                  implementation 'org.apache.commons:commons-lang3:3.12.0'
-'org.junit.jupiter:junit-jupiter:5.10.0'
+     'org.apache.commons:commons-lang3:3.12.0'
+'org.junit.jupiter:5.10.0'
     testImplementation 'com.codeborne:selenide:6.17.0'

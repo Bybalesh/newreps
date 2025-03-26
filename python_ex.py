@@ -6,10 +6,11 @@ import cv2 # pip install opencv-python
 gmaps = googlemaps.Client(key='YOUR_API_KEY')
 
 #Омск координаты ограничивающего прямоугольника (нужно найти точные)
+total_area = 0
+
+#размер сетки (очень приблизительный)
 northwest = (55.0, 73.0)
 southeast = (54.0, 74.0)
-
-#Размер сетки (очень приблизительный)
 grid_size = 0.1
 
 #Функция для получения статической карты
@@ -24,7 +25,6 @@ def analyze_image(image):
     private_sector_area = calculate_area(private_sector_pixels)
     return private_sector_area
 
-total_area = 0
 #Цикл по сетке (очень упрощенно)
 for lat in range(northwest[0], southeast[0], grid_size):
     for lng in range(northwest[1], southeast[1], grid_size):
@@ -33,4 +33,4 @@ for lat in range(northwest[0], southeast[0], grid_size):
         area = analyze_image(image)
         total_area += area
 
-print(f"Приблизительная площадь частного сектора Омска: {total_area}")
+print(f"Приблизительная площадь частного сектора Омска: {Total_area}")
